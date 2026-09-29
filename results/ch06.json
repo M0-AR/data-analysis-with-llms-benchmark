@@ -1,0 +1,14 @@
+{
+  "chapter": "ch06",
+  "ts": 1790704498.5246272,
+  "multimodal_prompt_verified": true,
+  "base64_utf8_verified": true,
+  "cost": {
+    "tokens_1024_high": 765,
+    "usd_2024": 0.003825,
+    "low_detail_tokens": 85,
+    "note": "recompute with current pricing before publishing; see docs/METHODOLOGY.md"
+  },
+  "live": "skipped offline (set OPENAI_API_KEY + IMAGE_URL to run live VQA; see README)",
+  "digest": "8a3d43152978cf40"
+}

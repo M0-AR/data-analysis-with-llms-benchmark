@@ -1,0 +1,8 @@
+{
+  "chapter": "ch10",
+  "ts": 1790704498.6077993,
+  "currency_tool_verified": true,
+  "agent_pattern": "ReAct Thought/Action/Observation (hwchase17/react)",
+  "langchain_eval": "LangSmith tracing + scheduled evals; see gitmcp docs",
+  "digest": "6bd5e308867df45f"
+}

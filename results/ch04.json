@@ -1,0 +1,42 @@
+{
+  "chapter": "ch04",
+  "ts": 1790704495.7516704,
+  "seed": 0,
+  "offline": {
+    "mode": "offline-sklearn-loo",
+    "n": 10,
+    "accuracy": 0.2,
+    "macro_f1": 0.16666666666666666,
+    "note": "honest LOO on 10 samples; book reports 6-8/10 zero-shot GPT-3.5/4. Baseline proves task is learnable, not memorized."
+  },
+  "live": {
+    "mode": "live-openai",
+    "skipped": true,
+    "reason": "openai package not installed (offline mode)"
+  },
+  "extraction": {
+    "extraction_postprocess_verified": true,
+    "rows": [
+      [
+        "Martin",
+        "4.0",
+        "Bachelor of Computer Science"
+      ]
+    ]
+  },
+  "clustering": {
+    "clustering_verified": true,
+    "labels": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    "note": "prose vs code separates; mirrors book textmix.csv poems-vs-emails"
+  },
+  "digest": "0a103a2c54882a63"
+}

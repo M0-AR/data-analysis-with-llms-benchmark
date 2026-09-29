@@ -1,0 +1,147 @@
+{
+  "chapter": "ch05",
+  "n_games": 6,
+  "execution_accuracy_demo": 1.0,
+  "runs": [
+    {
+      "q": "How many games are stored?",
+      "sql": "SELECT COUNT(*) FROM games;",
+      "difficulty": "easy",
+      "ok": true,
+      "rows": [
+        [
+          6
+        ]
+      ]
+    },
+    {
+      "q": "How many games did Activision create?",
+      "sql": "SELECT COUNT(*) FROM games WHERE publisher='Activision';",
+      "difficulty": "easy",
+      "ok": true,
+      "rows": [
+        [
+          1
+        ]
+      ]
+    },
+    {
+      "q": "Game sales by genre in 2017?",
+      "sql": "SELECT genre, COUNT(*) FROM games WHERE year=2017 GROUP BY genre;",
+      "difficulty": "medium",
+      "ok": true,
+      "rows": [
+        [
+          "Role-Playing",
+          1
+        ],
+        [
+          "Shooter",
+          1
+        ]
+      ]
+    },
+    {
+      "q": "Top game of 2016 by global sales?",
+      "sql": "SELECT name FROM games WHERE year=2016 ORDER BY globalsales DESC LIMIT 1;",
+      "difficulty": "medium",
+      "ok": true,
+      "rows": [
+        [
+          "FIFA 17"
+        ]
+      ]
+    },
+    {
+      "q": "Ratio of sports sales America vs Japan?",
+      "sql": "SELECT SUM(americasales)/SUM(japansales) FROM games WHERE genre='Sports';",
+      "difficulty": "hard",
+      "ok": true,
+      "rows": [
+        [
+          10.911007025761126
+        ]
+      ]
+    }
+  ],
+  "exploration": {
+    "tables": [
+      "games"
+    ],
+    "ddl": [
+      "CREATE TABLE games(rank int, name text, platform text, year int, genre text,\n      publisher text, americasales numeric, eusales numeric, japansales numeric, othersales numeric, globalsales numeric)"
+    ],
+    "columns": [
+      {
+        "cid": 0,
+        "name": "rank",
+        "type": "INT"
+      },
+      {
+        "cid": 1,
+        "name": "name",
+        "type": "TEXT"
+      },
+      {
+        "cid": 2,
+        "name": "platform",
+        "type": "TEXT"
+      },
+      {
+        "cid": 3,
+        "name": "year",
+        "type": "INT"
+      },
+      {
+        "cid": 4,
+        "name": "genre",
+        "type": "TEXT"
+      },
+      {
+        "cid": 5,
+        "name": "publisher",
+        "type": "TEXT"
+      },
+      {
+        "cid": 6,
+        "name": "americasales",
+        "type": "numeric"
+      },
+      {
+        "cid": 7,
+        "name": "eusales",
+        "type": "numeric"
+      },
+      {
+        "cid": 8,
+        "name": "japansales",
+        "type": "numeric"
+      },
+      {
+        "cid": 9,
+        "name": "othersales",
+        "type": "numeric"
+      },
+      {
+        "cid": 10,
+        "name": "globalsales",
+        "type": "numeric"
+      }
+    ],
+    "sample_rows": 3,
+    "keys_inferred": [
+      "rank PRIMARY KEY candidate"
+    ],
+    "quality_flags": [
+      "tiny demo DB; production needs profiling per Walk-Before-Run"
+    ]
+  },
+  "prompt_example": "Database:\nCREATE TABLE games(rank int, name text, platform text, year int, genre text,\n      publisher text, americasales numeric, eusales numeric, japansales numeric, othersales numeric, globalsales numeric)\nTranslate this question into SQL query:\nHow many games in 2017?",
+  "hidden_pattern_checks": {
+    "tables_beat_text": "see docs/METHODOLOGY.md \u00a71 (40.29% paper)",
+    "annotation_warning": "BIRD 52.8% / Spider2-snow 62.8% errors \u2192 dual-score required",
+    "spider_cliff": "Spider 91.2 \u2192 BIRD 73 \u2192 Spider2.0 21.3 expected on enterprise shift"
+  },
+  "ts": 1790704498.49829,
+  "digest": "9bc9a89edac8b344"
+}

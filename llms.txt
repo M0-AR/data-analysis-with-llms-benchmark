@@ -1,0 +1,5 @@
+# data-analysis-with-llms-benchmark
+Docker-reproducible benchmark verifying Trummer Data Analysis with LLMs Ch.1-10 on public data. 6 offline experiments, digests in results/. MIT.
+- Quickstart: pip install -r requirements.txt && python scripts/verify_all.py --offline
+- Docker: docker compose up --build
+- Docs: README.md, docs/METHODOLOGY.md, docs/DEMO.md, papers/OUTLINE.md

@@ -1,0 +1,43 @@
+{
+  "mode": "--offline",
+  "ts": 1790704495.7150953,
+  "chapters": {
+    "experiments/ch04_text/run.py": {
+      "exit": 0,
+      "secs": 2.73,
+      "stdout_tail": "{\n  \"chapter\": \"ch04\",\n  \"ts\": 1790704495.7516704,\n  \"seed\": 0,\n  \"offline\": {\n    \"mode\": \"offline-sklearn-loo\",\n    \"n\": 10,\n    \"accuracy\": 0.2,\n    \"macro_f1\": 0.16666666666666666,\n    \"note\": \"honest LOO on 10 samples; book reports 6-8/10 zero-shot GPT-3.5/4. Baseline proves task is learnable, not memorized.\"\n  },\n  \"live\": {\n    \"mode\": \"live-openai\",\n    \"skipped\": true,\n    \"reason\": \"openai package not installed (offline mode)\"\n  },\n  \"extraction\": {\n    \"extraction_postprocess_verified\": true,\n    \"rows\": [\n      [\n        \"Martin\",\n        \"4.0\",\n        \"Bachelor of Computer Science\"\n      ]\n    ]\n  },\n  \"clustering\": {\n    \"clustering_verified\": true,\n    \"labels\": [\n      0,\n      0,\n      0,\n      0,\n      0,\n      0,\n      1,\n      1\n    ],\n    \"note\": \"prose vs code separates; mirrors book textmix.csv poems-vs-emails\"\n  },\n  \"digest\": \"0a103a2c54882a63\"\n}\n",
+      "stderr_tail": ""
+    },
+    "experiments/ch05_sql/run.py": {
+      "exit": 0,
+      "secs": 0.06,
+      "stdout_tail": " platform text, year int, genre text,\\n      publisher text, americasales numeric, eusales numeric, japansales numeric, othersales numeric, globalsales numeric)\"\n    ],\n    \"columns\": [\n      {\n        \"cid\": 0,\n        \"name\": \"rank\",\n        \"type\": \"INT\"\n      },\n      {\n        \"cid\": 1,\n        \"name\": \"name\",\n        \"type\": \"TEXT\"\n      },\n      {\n        \"cid\": 2,\n        \"name\": \"platform\",\n        \"type\": \"TEXT\"\n      },\n      {\n        \"cid\": 3,\n        \"name\": \"year\",\n        \"type\": \"INT\"\n      },\n      {\n        \"cid\": 4,\n        \"name\": \"genre\",\n        \"type\": \"TEXT\"\n      },\n      {\n        \"cid\": 5,\n        \"name\": \"publisher\",\n        \"type\": \"TEXT\"\n      },\n      {\n        \"cid\": 6,\n        \"name\": \"americasales\",\n        \"type\": \"numeric\"\n      },\n      {\n        \"cid\": 7,\n        \"name\": \"eusales\",\n        \"type\": \"numeric\"\n      },\n      {\n        \"cid\": 8,\n        \"name\": \"japansales\",\n        \"type\": \"numeric\"\n      },\n      {\n        \"cid\": 9,\n        \"name\": \"othersales\",\n        \"type\": \"numeric\"\n      },\n      {\n        \"cid\": 10,\n        \"name\": \"globalsales\",\n        \"type\": \"numeric\"\n      }\n    ],\n    \"sample_rows\": 3,\n    \"keys_inferred\": [\n      \"rank PRIMARY KEY candidate\"\n    ],\n    \"quality_flags\": [\n      \"tiny demo DB; production needs profiling per Walk-Before-Run\"\n    ]\n  },\n  \"prompt_example\": \"Database:\\nCREATE TABLE games(rank int, name text, platform text, year int, genre text,\\n      publisher text, americasales numeric, eusales numeric, japansales numeric, othersales numeric, globalsales numeric)\\nTranslate this question into SQL query:\\nHow many games in 2017?\",\n  \"hidden_pattern_checks\": {\n    \"tables_beat_text\": \"see docs/METHODOLOGY.md \\u00a71 (40.29% paper)\",\n    \"annotation_warning\": \"BIRD 52.8% / Spider2-snow 62.8% errors \\u2192 dual-score required\",\n    \"spider_cliff\": \"Spider 91.2 \\u2192 BIRD 73 \\u2192 Spider2.0 21.3 expected on enterprise shift\"\n  },\n  \"ts\": 1790704498.49829,\n  \"digest\": \"9bc9a89edac8b344\"\n}\n",
+      "stderr_tail": ""
+    },
+    "experiments/ch06_vision/run.py": {
+      "exit": 0,
+      "secs": 0.03,
+      "stdout_tail": "{\n  \"chapter\": \"ch06\",\n  \"ts\": 1790704498.5246272,\n  \"multimodal_prompt_verified\": true,\n  \"base64_utf8_verified\": true,\n  \"cost\": {\n    \"tokens_1024_high\": 765,\n    \"usd_2024\": 0.003825,\n    \"low_detail_tokens\": 85,\n    \"note\": \"recompute with current pricing before publishing; see docs/METHODOLOGY.md\"\n  },\n  \"live\": \"skipped offline (set OPENAI_API_KEY + IMAGE_URL to run live VQA; see README)\",\n  \"digest\": \"8a3d43152978cf40\"\n}\n",
+      "stderr_tail": ""
+    },
+    "experiments/ch07_audio/run.py": {
+      "exit": 0,
+      "secs": 0.03,
+      "stdout_tail": "{\n  \"chapter\": \"ch07\",\n  \"ts\": 1790704498.550472,\n  \"recording_frames_5s\": 220500,\n  \"cost_5s_usd\": 0.0005,\n  \"supported\": [\n    \"mp3\",\n    \"mp4\",\n    \"mpeg\",\n    \"mpga\",\n    \"m4a\",\n    \"wav\",\n    \"webm\"\n  ],\n  \"limit_mb\": 25,\n  \"wer_benchmarks_2026\": {\n    \"clean\": \"2-3%\",\n    \"mixed\": \"~7%\",\n    \"meetings\": \"~16%\"\n  },\n  \"live\": \"skipped offline (place QuoteFromTheAlchemist.mp3 in data/raw + set OPENAI_API_KEY)\",\n  \"digest\": \"9c8e7d2b28c1e0cc\"\n}\n",
+      "stderr_tail": ""
+    },
+    "experiments/ch09_cost/run.py": {
+      "exit": 0,
+      "secs": 0.03,
+      "stdout_tail": "{\n  \"chapter\": \"ch09\",\n  \"ts\": 1790704498.5825982,\n  \"tokens_per_year\": 365000000,\n  \"gpt4_usd_yr\": 21900.0,\n  \"gpt35_usd_yr\": 182.5,\n  \"ratio\": 120.0,\n  \"ladder\": [\n    {\n      \"config\": \"untuned gpt-3.5\",\n      \"acc\": 0.6,\n      \"tok_10\": 2228\n    },\n    {\n      \"config\": \"+logit_bias+max1\",\n      \"acc\": 0.7,\n      \"tok_10\": 2228\n    },\n    {\n      \"config\": \"+1-shot\",\n      \"acc\": 0.8,\n      \"tok_10\": 4078\n    },\n    {\n      \"config\": \"gpt-4 zero-shot tuned\",\n      \"acc\": 0.8,\n      \"tok_10\": 2228,\n      \"cost_mult\": 120\n    },\n    {\n      \"config\": \"fine-tuned gpt-3.5 short prompt\",\n      \"acc\": 0.7,\n      \"tok_10\": 2085,\n      \"cost_mult\": 6\n    }\n  ],\n  \"rule\": \"always log tokens+latency+$; stratify by difficulty; CoT helps Hard+10.9/Extra-Hard+7.7 only\",\n  \"digest\": \"8e30912885779cd5\"\n}\n",
+      "stderr_tail": ""
+    },
+    "experiments/ch10_agents/run.py": {
+      "exit": 0,
+      "secs": 0.04,
+      "stdout_tail": "{\n  \"chapter\": \"ch10\",\n  \"ts\": 1790704498.6077993,\n  \"currency_tool_verified\": true,\n  \"agent_pattern\": \"ReAct Thought/Action/Observation (hwchase17/react)\",\n  \"langchain_eval\": \"LangSmith tracing + scheduled evals; see gitmcp docs\",\n  \"digest\": \"6bd5e308867df45f\"\n}\n",
+      "stderr_tail": ""
+    }
+  },
+  "digest": "92bd78619356231c"
+}

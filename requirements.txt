@@ -1,0 +1,14 @@
+pandas==2.2.2
+scikit-learn==1.5.0
+scipy==1.13.0
+sqlite-utils
+openai==1.43.0
+langchain==0.2.11
+langchain-openai==0.1.23
+langchain-community==0.2.12
+llama-index==0.10.45
+jupyterlab
+pyarrow
+tqdm
+jiwer
+matplotlib

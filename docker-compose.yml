@@ -1,0 +1,36 @@
+services:
+  bench:
+    build: .
+    image: llm-bench:2026
+    volumes:
+      - ./:/workspace
+      - ./results:/workspace/results
+      - ./data:/workspace/data
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - PYTHONUNBUFFERED=1
+      - BENCH_OFFLINE=${BENCH_OFFLINE:-1}
+    command: python scripts/verify_all.py --offline
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+
+  notebook:
+    build: .
+    image: llm-bench:2026
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./:/workspace
+    command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=''
+    profiles: ["tools"]
+
+  sqlite-browser:
+    image: coleifer/sqlite-web:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/data
+    command: sqlite_web --host=0.0.0.0 --port=8080 /data/games.db
+    profiles: ["tools"]

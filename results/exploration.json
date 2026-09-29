@@ -1,0 +1,72 @@
+{
+  "tables": [
+    "games"
+  ],
+  "ddl": [
+    "CREATE TABLE games(rank int, name text, platform text, year int, genre text,\n      publisher text, americasales numeric, eusales numeric, japansales numeric, othersales numeric, globalsales numeric)"
+  ],
+  "columns": [
+    {
+      "cid": 0,
+      "name": "rank",
+      "type": "INT"
+    },
+    {
+      "cid": 1,
+      "name": "name",
+      "type": "TEXT"
+    },
+    {
+      "cid": 2,
+      "name": "platform",
+      "type": "TEXT"
+    },
+    {
+      "cid": 3,
+      "name": "year",
+      "type": "INT"
+    },
+    {
+      "cid": 4,
+      "name": "genre",
+      "type": "TEXT"
+    },
+    {
+      "cid": 5,
+      "name": "publisher",
+      "type": "TEXT"
+    },
+    {
+      "cid": 6,
+      "name": "americasales",
+      "type": "numeric"
+    },
+    {
+      "cid": 7,
+      "name": "eusales",
+      "type": "numeric"
+    },
+    {
+      "cid": 8,
+      "name": "japansales",
+      "type": "numeric"
+    },
+    {
+      "cid": 9,
+      "name": "othersales",
+      "type": "numeric"
+    },
+    {
+      "cid": 10,
+      "name": "globalsales",
+      "type": "numeric"
+    }
+  ],
+  "sample_rows": 3,
+  "keys_inferred": [
+    "rank PRIMARY KEY candidate"
+  ],
+  "quality_flags": [
+    "tiny demo DB; production needs profiling per Walk-Before-Run"
+  ]
+}

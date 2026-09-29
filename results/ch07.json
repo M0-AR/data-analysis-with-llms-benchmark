@@ -1,0 +1,23 @@
+{
+  "chapter": "ch07",
+  "ts": 1790704498.550472,
+  "recording_frames_5s": 220500,
+  "cost_5s_usd": 0.0005,
+  "supported": [
+    "mp3",
+    "mp4",
+    "mpeg",
+    "mpga",
+    "m4a",
+    "wav",
+    "webm"
+  ],
+  "limit_mb": 25,
+  "wer_benchmarks_2026": {
+    "clean": "2-3%",
+    "mixed": "~7%",
+    "meetings": "~16%"
+  },
+  "live": "skipped offline (place QuoteFromTheAlchemist.mp3 in data/raw + set OPENAI_API_KEY)",
+  "digest": "9c8e7d2b28c1e0cc"
+}

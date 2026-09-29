@@ -1,0 +1,39 @@
+{
+  "chapter": "ch09",
+  "ts": 1790704498.5825982,
+  "tokens_per_year": 365000000,
+  "gpt4_usd_yr": 21900.0,
+  "gpt35_usd_yr": 182.5,
+  "ratio": 120.0,
+  "ladder": [
+    {
+      "config": "untuned gpt-3.5",
+      "acc": 0.6,
+      "tok_10": 2228
+    },
+    {
+      "config": "+logit_bias+max1",
+      "acc": 0.7,
+      "tok_10": 2228
+    },
+    {
+      "config": "+1-shot",
+      "acc": 0.8,
+      "tok_10": 4078
+    },
+    {
+      "config": "gpt-4 zero-shot tuned",
+      "acc": 0.8,
+      "tok_10": 2228,
+      "cost_mult": 120
+    },
+    {
+      "config": "fine-tuned gpt-3.5 short prompt",
+      "acc": 0.7,
+      "tok_10": 2085,
+      "cost_mult": 6
+    }
+  ],
+  "rule": "always log tokens+latency+$; stratify by difficulty; CoT helps Hard+10.9/Extra-Hard+7.7 only",
+  "digest": "8e30912885779cd5"
+}
